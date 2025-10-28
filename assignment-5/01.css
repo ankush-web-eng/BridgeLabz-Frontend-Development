@@ -1,0 +1,94 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #7dd3fc;
+  --text: #e6eef8;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Segoe UI, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  background: rgba(4, 8, 12, 0.85);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  z-index: 10;
+}
+.site-header .brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.site-header .nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+.hero {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.profile {
+  width: 13.75rem;
+  height: 13.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid rgba(125, 211, 252, 0.12);
+}
+.bio h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+.bio p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.site-footer {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 18, 32, 0.9),
+    rgba(6, 10, 16, 0.9)
+  );
+  color: var(--text);
+}
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile {
+    width: 10rem;
+    height: 10rem;
+  }
+}

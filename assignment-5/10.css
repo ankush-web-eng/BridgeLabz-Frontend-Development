@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0b1220;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(4, 6, 12, 0.9);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav nav a {
+  color: #fff;
+  margin-left: 0.8rem;
+  text-decoration: none;
+}
+.hero {
+  height: 60vh;
+  background-image: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400&q=60");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+.hero-inner {
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.about {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem;
+  align-items: center;
+}
+.about .col {
+  flex: 1;
+}
+.about .image img {
+  max-width: 100%;
+  height: auto;
+  border: 8px solid rgba(11, 18, 32, 0.05);
+}
+.services {
+  padding: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(125, 211, 252, 0.12),
+    rgba(99, 102, 241, 0.08)
+  );
+}
+.service-list {
+  display: flex;
+  gap: 1rem;
+}
+.svc {
+  flex: 1;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid rgba(11, 18, 32, 0.06);
+  box-shadow: 0 8px 24px rgba(11, 18, 32, 0.06);
+  text-align: center;
+}
+.contact-section {
+  padding: 2rem;
+}
+.mini-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.mini-form label {
+  display: flex;
+  flex-direction: column;
+}
+.mini-form input {
+  padding: 0.5rem;
+  border: 1px solid #dbe7f0;
+}
+.mini-form button {
+  padding: 0.6rem 1rem;
+  background: #041426;
+  color: #fff;
+  border: none;
+}
+.foot {
+  padding: 1rem;
+  text-align: center;
+  background: #f3f6f9;
+  margin-top: 2rem;
+}
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+  }
+  .service-list {
+    flex-direction: column;
+  }
+}

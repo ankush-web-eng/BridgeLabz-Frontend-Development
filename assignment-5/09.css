@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #f0efe8;
+  color: #111;
+}
+.paper {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+}
+.spanner {
+  column-span: all;
+  display: block;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+.columns {
+  column-count: 3;
+  column-gap: 2rem;
+  column-fill: balance;
+  text-align: justify;
+}
+.float-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  width: 9rem;
+}
+@media (max-width: 900px) {
+  .columns {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .columns {
+    column-count: 1;
+  }
+  .float-left {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
