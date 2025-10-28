@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>04 - Frameset Layout</title>
+  </head>
+  <frameset rows="30%,70%">
+    <frame srcdoc="<nav><a href='#'>Home</a> | <a href='#'>About</a> | <a href='#'>Contact</a></nav>" name="topframe">
+    <frame srcdoc="<h1>Welcome to My Website</h1>" name="bottomframe">
+    <noframes>
+      <body>
+        <h1>Frames are not supported by your browser.</h1>
+      </body>
+    </noframes>
+  </frameset>
+</html>
